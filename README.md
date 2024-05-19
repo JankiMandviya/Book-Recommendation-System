@@ -57,6 +57,6 @@ To install and run the book recommendation system locally, follow these steps:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/JankiMandviya/Book-Recommendation-System/blob/main/LICENSE.txt) file for details.
 
 ---
