@@ -73,6 +73,16 @@
       margin-top: 10px;
       color: black;
     }
+
+    .no-results{
+      display: flex;
+      visibility: hidden;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10%;
+      font-size: 50px;
+      color: rgb(19, 60, 94);
+    }
     </style>
 
 </head>
@@ -143,6 +153,11 @@
                       </div>
                   </div>
                 {% endfor %}
+
+                {% elif data==None %}
+                <div class="no-results" style="visibility: visible;">
+                  <p>No results found</p>
+                </div>
               {% endif %}
           </div>
       </div>

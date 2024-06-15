@@ -34,6 +34,9 @@ def Recommed():
     Arguments:
     book_title : title of the book
     '''
+    if User_input == "":
+        print("Enter the book name")
+        return render_template('recommender.html',data=None)
     print(User_input)
     #for avoiding case sensitiveness
     book_title = User_input.upper()
@@ -42,7 +45,7 @@ def Recommed():
 
     if book_title not in list(pt['title']):
         print("The book is not available")
-        return None
+        return render_template('recommender.html',data=None)
     else:
         print("The book is available")
         print("The recommendations are...")
