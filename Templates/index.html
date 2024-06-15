@@ -73,6 +73,20 @@
             margin-top: 10px;
             color: black;
           }
+
+          /* SIBLING FADE: fade out siblings around a hovered item */
+          .card-container:hover .card {
+              opacity: 0.4;
+              transform: scale(0.9);
+              transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
+          }
+
+          .card-container .card:hover {
+              opacity: 1;
+              transform: scale(1);
+              transition-delay: 0ms, 0ms;
+          }
+
           </style>
 
       </head>
@@ -106,7 +120,7 @@
               </div>
 
               <div class="container">
-                <div class="row">
+                <div class="card-container row" >
                     <!-- Loop through and print cards -->
                     {% for i in range(50) %}
                     <div class="col-md-2 py-4">
